@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;hello.core.scan.AutowiredTest&apos; to &apos;AutoAppConfigTest&apos;&#x0A;- Original project: &apos;hello&apos;&#x0A;- Original element: &apos;hello.core.scan.AutowiredTest&apos;&#x0A;- Renamed element: &apos;hello.core.scan.AutoAppConfigTest&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;AutowiredTest&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/test\/java=/gradle_scope=/test=/=/gradle_used_by_scope=/test=/=/test=/true=/&lt;hello.core.scan{AutowiredTest.java[AutowiredTest" matchStrategy="1" name="AutoAppConfigTest" qualified="false" references="true" similarDeclarations="false" stamp="1654952245478" textual="false" version="1.0"/>
+</session>

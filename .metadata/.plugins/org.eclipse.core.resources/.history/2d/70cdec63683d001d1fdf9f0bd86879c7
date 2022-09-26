@@ -1,0 +1,20 @@
+package jpashop;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.fasterxml.jackson.datatype.hibernate5.Hibernate5Module;
+
+@SpringBootApplication
+public class JpashopApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(JpashopApplication.class , args);
+		
+		@bean
+		Hibernate5Module hibernate5Module() {
+			return new Hibernate5Module();
+		}
+	}
+
+}
