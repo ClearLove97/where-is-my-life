@@ -31,7 +31,7 @@ public class OrderItem {
 	@JoinColumn( name = "item_id")
 	private Item item;
 	
-	@JsonIgnore
+	@JsonIgnore // 양방향 연관관계시 무한루프를 방지하기위해 제이슨이그노어 어노테이션을 설정한다
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "order_id")
 	private Order order;
