@@ -9,7 +9,7 @@ import jpashop.repository.OrderRepository;
 import jpashop.repository.OrderSearch;
 import jpashop.repository.order.query.OrderFlatDto;
 import jpashop.repository.order.query.OrderQueryDto;
-import jpashop.repository.order.query.OrderqueryRepository;
+import jpashop.repository.order.query.OrderQueryRepository;
 import lombok.Data;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
 public class OrderApiController {
 
     private final OrderRepository orderRepository;
-    private final OrderqueryRepository orderqueryRepository;
+    private final OrderQueryRepository orderQueryRepository;
 
     @GetMapping("/api/v1/orders")
     public List<Order> orderV1(){ // Entity 를 직접 노출
@@ -57,17 +57,17 @@ public class OrderApiController {
 
     @GetMapping("/api/v4/orders")
     public List<OrderQueryDto> ordersV4(){
-      return  orderqueryRepository.findOrderQueryDtos();
+      return  orderQueryRepository.findOrderQueryDtos();
     }
 
     @GetMapping("/api/v5/orders")
     public List<OrderQueryDto> ordersV5(){
-        return orderqueryRepository.findAllByDto_optimization();
+        return orderQueryRepository.findAllByDto_optimization();
     }
 
     @GetMapping("/api/v6/orders")
     public List<OrderFlatDto> ordersV6(){
-        return orderqueryRepository.findAllByDto_flat();
+        return orderQueryRepository.findAllByDto_flat();
     }
     @Getter
     static class OrderDto{
