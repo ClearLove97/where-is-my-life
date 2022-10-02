@@ -30,7 +30,7 @@ public class Member {
 	@Embedded
     private Address address;
 	
-	@JsonIgnore
+	@JsonIgnore // 양방향 연관관계시 무한루프를 방지하기위해 제이슨이그노어 어노테이션을 설정한다
 	@OneToMany( mappedBy ="member")
 	private List<Order> orders = new ArrayList<>();
 }

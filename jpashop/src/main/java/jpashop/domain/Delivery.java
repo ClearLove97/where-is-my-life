@@ -24,7 +24,7 @@ public class Delivery {
 	@Column(name = "delivery_id")
 	private Long id;
 	
-	@JsonIgnore
+	@JsonIgnore	// 양방향 연관관계시 무한루프를 방지하기위해 제이슨이그노어 어노테이션을 설정한다
 	@OneToOne(fetch = FetchType.LAZY,mappedBy = "delivery")
 	private Order order;
 	
